@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(glfw3 3.4 REQUIRED)
+find_package(glm 1.0.1 REQUIRED)
 
 # GLAD files
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/glad/include)
