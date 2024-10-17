@@ -12,8 +12,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/glad/include)
 file(GLOB BUTTERFLIES_SOURCES_C ${CMAKE_CURRENT_SOURCE_DIR} *.c glad/src/glad.c)
 set(GLAD_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/glad/src/glad.c)
 
-add_executable(${PROJECT_NAME} main.cpp ${GLAD_SOURCES})
+file(GLOB SOURCES *.h *.cpp)
+
+add_executable(${PROJECT_NAME} main.cpp ${GLAD_SOURCES} ${SOURCES})
 
 # GLFW
 target_link_libraries(${PROJECT_NAME} glfw)
-
